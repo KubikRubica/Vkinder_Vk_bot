@@ -28,9 +28,6 @@ if __name__ == '__main__':
             if event.obj.message:
                 if len(event.obj.message['text']) == 10 or len(event.obj.message['text']) == 11:
                     id_user = event.obj.message['text']
-                    if event.from_user:
-                        ya = VK_USER(group_token_vk=group_token_vk, user_token_vk=user_token_vk, id=id_user)
-                        ya.request_parameters_user(id=id_user)
 
                         personal_vk = VkApi(token=user_token_vk)
 
