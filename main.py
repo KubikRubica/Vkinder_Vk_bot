@@ -64,6 +64,12 @@ if __name__ == '__main__':
                 with connection:
                     cur = connection.cursor()
                     value1 = (cur.execute("SELECT * FROM 'searching_results'").fetchall())
+                   
+                    if 'value1' in globals():
+                        print('y')
+                    else:
+                        print('n')
+                
                     value2 = value1[n]
                     id_users = f'{value2[0]}\n'
                     link_users = f'{value2[1]}\n'
